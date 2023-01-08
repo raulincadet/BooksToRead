@@ -45,10 +45,13 @@ ALTER TABLE tbooks
 ADD auth_ID INT NOT NULL,
 ADD	publisher_ID  NOT NULL;
 
--- Adding a new author
+-- Adding some other authors
 INSERT INTO tauthors(auth_ID,firstname,middlename,lastname)
 	VALUES
-	(13,'Adelle',NULL,'Davis');
+	(13,'Adelle','','Davis'),
+	(14,'Gerald','','Michaelson'),
+	(15,'Lon','','Safko'),
+	(16,'David','K.','Break');
 
 --====================================================================
 ---- I don't need the column city in the table tbooks
@@ -69,7 +72,10 @@ INSERT INTO tbooks(book_ID,title,isbn,book_year,auth_ID,publisher_ID)
 	(07,'Thinking fast and slow','9780374533557',2011,08,05),
 	(08,'Speed reading with the right brain: Learn to read ideas instead of just words',NULL,2014,05,NULL),
 	(09,'Let''s Eat Right to Keep Fit','9780451155504',1970,13,06),
-	(10,'Think and grow rich',	'9781585424337',2005,03,07);
+	(10,'Think and grow rich',	'9781585424337',2005,03,07),
+	(11,'How to win friends and influence people',	'1580627765',2003,13,01),
+	(12,'The social media bible: tactics, tools and strategies for business success','9780470411551', 2009,14,03),
+	(13,'The social media bible: tactics, tools and strategies for business success','9780470411551', 2009,15,03);
 
 --====================================================================
 -- Showing all data from table 'tbooks'
